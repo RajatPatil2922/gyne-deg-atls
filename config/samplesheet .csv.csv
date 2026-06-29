@@ -1,2 +1,0 @@
-dataset_id,condition,tissue_primary,subtissue,platform,technique,data_source,group_column,case_label,control_label,cycle_phase,notes
-"GSE5090,PCOS,Adipose,,GPL96,Microarray,GEO_matrix,,,,,",,,,,,,,,,,
