@@ -1,8 +1,8 @@
 # Combine per-dataset DEGs WITHIN a (condition x tissue) stratum.
 # Robust Rank Aggregation (default) or random-effects (metafor).
 rule meta:
-    input: lambda wc: expand("results/deg/{dataset}.deg.tsv",
-                             dataset=[d for d in DATASETS])  # TODO: filter to this stratum
+    input: lambda wc: expand("results/deg/{dataset}.deg.tsv", dataset=[d for d in DATASETS])
+
     output: "results/meta/{stratum}.meta.tsv"
     params: method=config["meta"]["method"], minds=config["meta"]["min_datasets"]
     conda: "../../envs/meta.yaml"
